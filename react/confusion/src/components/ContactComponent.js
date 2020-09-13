@@ -38,7 +38,7 @@ class Contact extends Component {
     render() {
         return (
         
-
+                <div className="container">
                 <div className="row row-content">
                    <div className="col-12">
                       <h3>Send us your Feedback</h3>
@@ -121,6 +121,7 @@ class Contact extends Component {
                         </Form>
                     </div>
                </div>
+             </div>
 
 
         
