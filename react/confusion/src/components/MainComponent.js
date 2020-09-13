@@ -1,30 +1,25 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, NavbarText, NavbarToggler } from 'reactstrap';
 import Menu from './MenuComponent';
-
-
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
+import { DISHES } from '../shared/dishes';
 
 class Main extends Component {
-
+    constructor(props){
+        super(props);
+        this.state = {
+          dishes: DISHES
+        };
+      }
+    
     
 
     render() {
         return (
             <div>
-                <Navbar dark color="secondary">
-                    <div className="container">
-                        <NavbarBrand href="/">
-                            My Tribe
-                        </NavbarBrand>
-                        <NavbarToggler className="justify-content-end">
-                           <NavbarText>
-                              Signed in as: <a href="/">Akanksha</a>
-                           </NavbarText>
-                        </NavbarToggler>
-                    </div>
-                </Navbar>
-                
-
+             <Header />
+             <Menu dishes ={this.state.dishes} />
+             <Footer />
             </div>
         );
     }
